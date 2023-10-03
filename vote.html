@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vote.css">
+    <title>Vote checker</title>
+</head>
+<body>
+    <h2>Voting Eligibility Checker</h2>
+    <div class="container">
+    <label for="name">Name: </label>
+    <input type="text" id="name"><br><br>
+
+    <label for="age">Age: </label>
+    <input type="text" id="age"><br><br>
+
+    <button onclick="checkEligibility()">Check Eligibility</button>
+    <h3><span id="result">-</span></h3>
+    </div>
+
+    <p>Submitted by: Estares Liam Lei</p>
+    <div class="back-button">
+        <a href="index.html">Go Back</a>
+    </div>
+
+    <script>
+        function checkEligibility() {
+            var name = document.getElementById("name").value;
+            var age = parseInt(document.getElementById("age").value);
+
+            if (name.trim() === "" || isNaN(age)) {
+                alert("Please enter a valid name and age.");
+                return;
+            }
+
+            if (age >= 18) {
+                document.getElementById("result").innerHTML = name + ", you are allowed to vote!";
+                document.getElementById('result').style.color = "green";
+            } else {
+                document.getElementById("result").innerHTML = name + ", you are not allowed to vote.";
+                document.getElementById('result').style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>

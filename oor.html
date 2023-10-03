@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="oor.css">
+    <title>Odd or even</title>
+</head>
+<body>
+    <h1>Even or Odd Checker</h1>
+    <div class="container">
+    <label for="number">Number:</label>
+    <input type="text" id="number"><br><br>
+
+    <button onclick="checkEvenOrOdd()">Check Even or Odd</button>
+
+    <h3><span id="result">-</span></h3>
+    </div>
+
+    <p>Submitted by: Estares Liam Lei</p>
+    <div class="back-button">
+        <a href="index.html">Go Back</a>
+    </div>
+
+    <script>
+        function checkEvenOrOdd() {
+            var number = parseInt(document.getElementById("number").value);
+
+            if (isNaN(number)) {
+                alert("Please enter a valid number.");
+                return;
+            }
+
+            if (number % 2 === 0) {
+                document.getElementById("result").innerHTML = number + " is even.";
+            } else {
+                document.getElementById("result").innerHTML = number + " is odd.";
+            }
+        }
+    </script>
+</body>
+</html>

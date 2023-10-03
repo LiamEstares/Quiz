@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home Page</title>
+</head>
+<body>
+    <h2>JavaScript programs</h2>
+
+    <div class="container">
+        <h3>Select a program</h3>
+        <a href="addition.html" class="btn-home" id="additionTab">Addition of Two numbers</a><br/><br/>
+        <a href="compare.html" class="btn-home" id="compareTab">Comparing Two numbers</a><br/><br/>
+        <a href="average.html" class="btn-home" id="averageTab">Average Quiz</a><br/><br/>
+        <a href="five.html" class="btn-home" id="fiveInputsTab">Input Five Numbers</a><br/><br/>
+        <a href="vote.html" class="btn-home" id="voteTab">Vote Checker</a><br/><br/>
+        <a href="number.html" class="btn-home" id="numberOperationTab">Number Operation</a><br/><br/>
+        <a href="oor.html" class="btn-home" id="oddOrEvenTab">Odd Or Even</a><br/><br/>
+        <a href="grade.html" class="btn-home" id="gradeConverterTab">Grade Converter</a><br/><br/>
+        <a href="pon.html" class="btn-home" id="positiveOrNegativeTab">Positive Or Negative</a><br/><br/>
+
+        <div class="back-button">
+        <p>Submitted by: <a href="https://liamestares.github.io/portfolio-liam/" id="portfolioTab">Estares Liam Lei</a></p>
+        <a href="index.html">Go Back</a>
+        </div>
+    </div>
+    
+    <script>
+        var additionTab = document.getElementById("additionTab");
+        var compareTab = document.getElementById("compareTab");
+        var averageTab = document.getElementById("averageTab");
+        var fiveInputsTab = document.getElementById("fiveInputsTab");
+        var voteTab = document.getElementById("voteTab");
+        var numberOperationTab = document.getElementById("numberOperationTab");
+        var oddOrEvenTab = document.getElementById("oddOrEvenTab");
+        var gradeConverterTab = document.getElementById("gradeConverterTab");
+        var positiveOrNegativeTab = document.getElementById("positiveOrNegativeTab");
+        var portfolioTab = document.getElementById("portfolioTab");
+    
+        function openInNewTab(event, url) {
+            event.preventDefault();
+            window.open(url, "_blank");
+        }
+
+        additionTab.addEventListener("click", function(event) {
+            openInNewTab(event, additionTab.href);
+        });
+    
+        compareTab.addEventListener("click", function(event) {
+            openInNewTab(event, compareTab.href);
+        });
+    
+        averageTab.addEventListener("click", function(event) {
+            openInNewTab(event, averageTab.href);
+        });
+    
+        fiveInputsTab.addEventListener("click", function(event) {
+            openInNewTab(event, fiveInputsTab.href);
+        });
+    
+        voteTab.addEventListener("click", function(event) {
+            openInNewTab(event, voteTab.href);
+        });
+    
+        numberOperationTab.addEventListener("click", function(event) {
+            openInNewTab(event, numberOperationTab.href);
+        });
+    
+        oddOrEvenTab.addEventListener("click", function(event) {
+            openInNewTab(event, oddOrEvenTab.href);
+        });
+    
+        gradeConverterTab.addEventListener("click", function(event) {
+            openInNewTab(event, gradeConverterTab.href);
+        });
+    
+        positiveOrNegativeTab.addEventListener("click", function(event) {
+            openInNewTab(event, positiveOrNegativeTab.href);
+        });
+    
+        portfolioTab.addEventListener("click", function(event) {
+            openInNewTab(event, portfolioTab.href);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="number.css">
+    <title>Number operation</title>
+</head>
+<body>
+    <h1>Number Operations</h1>
+    <div class="container">
+
+    <label for="num1">Number 1:</label>
+    <input type="text" id="num1"><br><br>
+
+    <label for="num2">Number 2:</label>
+    <input type="text" id="num2"><br><br>
+
+    <button onclick="performOperation()">Perform Operation</button>
+
+    <h3>Answer: <span id="result">-</span></h3>
+    </div>
+
+    <p>Submitted by: Estares Liam Lei</p>
+    <div class="back-button">
+        <a href="index.html">Go Back</a>
+    </div>
+
+    <script>
+        function performOperation() {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("Please enter valid numbers.");
+                return;
+            }
+
+            var answer;
+
+            if (num1 === num2) {
+                answer = num1 - num2;
+            } else if (num1 > num2) {
+                answer = num1 + num2;
+            } else {
+                answer = num1 * num2;
+            }
+
+            document.getElementById("result").innerHTML = answer;
+        }
+    </script>
+</body>
+</html>
